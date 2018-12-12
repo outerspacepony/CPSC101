@@ -39,16 +39,25 @@ let toPrint = "";
 //store user's integer ie. 5
 var MAX_ROWS=+prompt("Enter an integer");
 
-//Row # ie. first loop = row 5
+//Step 1 Row # ie. first loop = row 5
 for(row = MAX_ROWS; row > 0; row--) {
 //num additon every read, first loop first read = 1
     num++;
     
-//loop dots, first loop : row=5 so 2<=5, 3<=5, 4<=5,5<=5 and stop. so 4 times it is looped = 4 dots
+//step 2 loop dots, first loop : row=5 so 2<=5, 3<=5, 4<=5,5<=5 and stop. so 4 times it is looped = 4 dots
+    for (dot = 2 ; dot<=row ; dot++){
+            toPrint += ".";
+            
+    }
+//step 3 Add the number to the loop  and now toPrint =....1    
+    toPrint+= num;
+
+//step 4 max_rows = 5 at this point and dot will now be assigned a new value of 4. 4>=5 nope so first loop does not loop this
     for(dot = MAX_ROWS-1 ; dot>=row;dot--) {
         toPrint+= ".";
     }
     
+    // = ....1\n and repeats steps 1-4...
     toPrint+="\n";
 }
 
