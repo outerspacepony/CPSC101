@@ -36,22 +36,15 @@ console.log(totalAvg);
 let row, dot,num = 0;
 let toPrint = "";
 
-//store user's integer
+//store user's integer ie. 5
 var MAX_ROWS=+prompt("Enter an integer");
 
+//Row # ie. first loop = row 5
 for(row = MAX_ROWS; row > 0; row--) {
-//Row
+//num additon every read, first loop first read = 1
     num++;
-    //Left hand side dots 
-    for (dot = 2 ; dot<=row ; dot++){
-            toPrint += ".";
-            
-    }
     
-    //number between the dots
-    toPrint+= num;
-    
-    //Right handside dots
+//loop dots, first loop : row=5 so 2<=5, 3<=5, 4<=5,5<=5 and stop. so 4 times it is looped = 4 dots
     for(dot = MAX_ROWS-1 ; dot>=row;dot--) {
         toPrint+= ".";
     }
