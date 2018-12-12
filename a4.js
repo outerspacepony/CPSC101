@@ -42,13 +42,16 @@ var MAX_ROWS=+prompt("Enter an integer");
 for(row = MAX_ROWS; row > 0; row--) {
 //Row
     num++;
+    //Left hand side dots 
     for (dot = 2 ; dot<=row ; dot++){
             toPrint += ".";
             
     }
     
+    //number between the dots
     toPrint+= num;
     
+    //Right handside dots
     for(dot = MAX_ROWS-1 ; dot>=row;dot--) {
         toPrint+= ".";
     }
